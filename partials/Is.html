@@ -1,0 +1,17 @@
+{{/*
+  Is
+  Returns true if project env matches given string
+
+  @author @regisphilibert
+
+  @context String (.)
+
+  @access public
+
+  @returns Bool
+
+  {{ if partialCached "tnd-env/Is" "production" "production" }}
+*/}}
+
+{{ $env := partialCached "tnd-env/Get" "Get" }}
+{{ return eq $env $ }}
